@@ -33,6 +33,10 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
+      - name: version
+        id: version
+        run: git describe | sed 's/^v//'
+
       - name: Build the deb file
-        run: ./debify.sh 1.0.0 1
+        run: ./debify.sh ${{ steps.version.outputs.version }} 1
 
