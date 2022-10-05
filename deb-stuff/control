@@ -1,0 +1,6 @@
+Package: foo
+Version: $VERSION-$DEBVERSION
+Architecture: amd64
+Maintainer: manni.lee.wood@gmail.com
+Priority: extra
+Description: foo
